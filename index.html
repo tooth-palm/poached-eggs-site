@@ -4,34 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="商品の紹介ページ">
-    <title>商品紹介</title>
+    <title>Poached Eggs | クオリティにこだわったコンパクトな分割キーボード</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Web Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>商品紹介ページ</h1>
+<body class="kosugi-maru-regular">
+    <header class="site-header">
+        <div class="spacer"></div>
+        <div class="logo-container">
+            <img src="images/omuken_logo.png" alt="omuken" width="188" height="32" />
+        </div>
+        <nav class="nav-links">
+            <a href="#">ユーザーガイド</a>
+            <a href="#">購入</a>
+        </nav>
     </header>
+    <main class="content-area-frame">
+        <img src="images/keyboard_hero.png" alt="あら、かわいい。" width="640" height="280" class="hero-image">
+        <div class="content-area">
+            <hgroup class="catchcopy">
+                <h1>「あら、かわいい。」</h1>
+                <p>poached-eggsはデスクを可愛く彩ってくれるコンパクトな無線分割キーボードです。</p>
+                <p>ふとした瞬間に感じられるかわいさとガジェットとしての満足感を両立したコンパクトなフォルムに、キーボード好きも唸るロマン仕様を詰め込みました。</p>
+            </hgroup>
 
-    <main>
-        <article>
-            <h2>商品1</h2>
-            <p>この商品は高品質で多用途に使用できる製品です。ぜひお試しください。</p>
-        </article>
-
-        <article>
-            <h2>商品2</h2>
-            <p>この商品は耐久性があり、長期間にわたり使用可能です。</p>
-        </article>
-
-        <article>
-            <h2>商品3</h2>
-            <p>この商品はおしゃれなデザインで、どのような場面にも適応します。</p>
-        </article>
+            <article class="product-overview">
+                <div class="container">
+                    <div class="item1">A</div>
+                    <div class="item3">C</div>
+                    <div class="item4">D</div>
+                    <div class="item5">E</div>
+                    <div class="item6">poached-eggs<br>¥33500</div>
+                    <div class="item2">キーケットで出展します</div>
+                </div>
+            </article>
+            
+            <article class="product-article">
+                <h2>ぽってり、とデスクにたたずむ</h2>
+                <p>poached-eggsのユニットは手に馴染むサイズ感で、大きさや重さはiPhoneとほぼ同じになっています。</p>
+                <p>ガジェットにありがちな無骨さを排除したおもちゃのような可愛いデザインですが、アルミ製のボトムプレートを採用することにより、決して安っぽさを感じないずっしり感を併せ持っています。</p>
+            </article>
+            
+            <article class="product-article">
+                <h2>あなたの推し色は？</h2>
+                <p>自分の可愛いは自分で選びましょう。3色のカラフルなフレームから選ぶことができます。</p>
+                <div class="color-picker">
+                    <div class="color-option" onclick="selectColor(this, 'Red')">
+                        <div class="label-container">
+                            <div>Yolk Yellow</div>
+                            <div class="color-circle" style="--color: #EFB000;"></div>
+                        </div>
+                        <img src="images/yellow_frame.png" alt="Yolk Yellow" width="201" height="140">
+                    </div>
+                    <div class="color-option" onclick="selectColor(this, 'Blue')">
+                        <div class="label-container">
+                            <div>Rusty Blue</div>
+                            <div class="color-circle" style="--color: rgb(54, 117, 194);"></div>
+                        </div>
+                        <img src="images/blue_frame.png" alt="Rusty Blue" width="201" height="140">
+                    </div>
+                    <div class="color-option" onclick="selectColor(this, 'Green')">
+                        <div class="label-container">
+                            <div>Pale Pink</div>
+                            <div class="color-circle" style="--color: rgb(219, 80, 149);"></div>
+                        </div>
+                        <img src="images/pink_frame.png" alt="Pale Pink" width="201" height="140">
+                    </div>
+                </div>                            
+            </article>
+            
+            <article class="product-article">
+                <h2>見た目も中身も妥協しない</h2>
+                <p>可愛い外観のキーボードは世の中にたくさんあります。poached-eggsはスペックにもこだわりを詰め込みました。</p>
+            </article>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 商品紹介ページ</p>
+    <footer class="site-footer">
+        <p>&copy; 2025 poached-eggs by omuken</p>
     </footer>
 </body>
 </html>
