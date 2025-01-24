@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+    <!-- keen-slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+    <script>
+        let slider
+
+        document.addEventListener("DOMContentLoaded", () => {
+            slider = new KeenSlider(".keen-slider", {
+                loop: true,
+                centered: true,
+                slides: {
+                    perView: 1.4,
+                    spacing: 10,
+                    origin: 'center',
+                },
+            });
+
+            document.querySelector(".slider-prev-button").addEventListener("click", () => {
+                slider.prev();
+            });
+
+            document.querySelector(".slider-next-button").addEventListener("click", () => {
+                slider.next();
+            });
+        });
+
+        const selectYellow = () => {
+            slider.moveToIdx(0)
+        }
+
+        const selectBlue = () => {
+            slider.moveToIdx(1)
+        }
+
+        const selectPink = () => {
+            slider.moveToIdx(2)
+        }
+    </script>
 </head>
+
 <body class="kosugi-maru-regular">
     <header class="site-header">
         <div class="spacer"></div>
@@ -25,7 +66,21 @@
         </nav>
     </header>
     <main class="content-area-frame">
-        <img src="images/keyboard_hero.png" alt="あら、かわいい。" width="640" height="280" class="hero-image">
+        <div class="carousel">
+            <div class="keen-slider">
+                <div class="keen-slider__slide">
+                    <img src="images/keyboard_hero_yellow.png" alt="あら、かわいい。" width="640" height="280" class="hero-image">
+                </div>
+                <div class="keen-slider__slide">
+                    <img src="images/keyboard_hero_blue.png" alt="あら、かわいい。" width="640" height="280" class="hero-image">
+                </div>
+                <div class="keen-slider__slide">
+                    <img src="images/keyboard_hero_pink.png" alt="あら、かわいい。" width="640" height="280" class="hero-image">
+                </div>
+            </div>
+            <button class="slider-prev-button">＜</button>
+            <button class="slider-next-button">＞</button>
+        </div>
         <div class="content-area">
             <hgroup class="catchcopy">
                 <h1>「あら、かわいい。」</h1>
@@ -43,41 +98,41 @@
                     <div class="item2">キーケットで出展します</div>
                 </div>
             </article>
-            
+
             <article class="product-article">
                 <h2>ぽってり、とデスクにたたずむ</h2>
                 <p>poached-eggsのユニットは手に馴染むサイズ感で、大きさや重さはiPhoneとほぼ同じになっています。</p>
                 <p>ガジェットにありがちな無骨さを排除したおもちゃのような可愛いデザインですが、アルミ製のボトムプレートを採用することにより、決して安っぽさを感じないずっしり感を併せ持っています。</p>
             </article>
-            
+
             <article class="product-article">
                 <h2>あなたの推し色は？</h2>
                 <p>自分の可愛いは自分で選びましょう。3色のカラフルなフレームから選ぶことができます。</p>
                 <div class="color-picker">
-                    <div class="color-option" onclick="selectColor(this, 'Red')">
+                    <button role="button" class="color-option" onclick="selectYellow()">
                         <div class="label-container">
                             <div>Yolk Yellow</div>
                             <div class="color-circle" style="--color: #EFB000;"></div>
                         </div>
                         <img src="images/yellow_frame.png" alt="Yolk Yellow" width="201" height="140">
-                    </div>
-                    <div class="color-option" onclick="selectColor(this, 'Blue')">
+                    </button>
+                    <button role="button" class="color-option" onclick="selectBlue()">
                         <div class="label-container">
                             <div>Rusty Blue</div>
                             <div class="color-circle" style="--color: rgb(54, 117, 194);"></div>
                         </div>
                         <img src="images/blue_frame.png" alt="Rusty Blue" width="201" height="140">
-                    </div>
-                    <div class="color-option" onclick="selectColor(this, 'Green')">
+                    </button>
+                    <button role="button" class="color-option" onclick="selectPink()">
                         <div class="label-container">
                             <div>Pale Pink</div>
                             <div class="color-circle" style="--color: rgb(219, 80, 149);"></div>
                         </div>
                         <img src="images/pink_frame.png" alt="Pale Pink" width="201" height="140">
-                    </div>
-                </div>                            
+                    </button>
+                </div>
             </article>
-            
+
             <article class="product-article">
                 <h2>見た目も中身も妥協しない</h2>
                 <p>可愛い外観のキーボードは世の中にたくさんあります。poached-eggsはスペックにもこだわりを詰め込みました。</p>
@@ -89,4 +144,5 @@
         <p>&copy; 2025 poached-eggs by omuken</p>
     </footer>
 </body>
+
 </html>

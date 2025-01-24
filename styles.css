@@ -229,3 +229,53 @@ body {
   grid-row: span 1;
   background-color: #aaa;
 }
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.keen-slider {
+  position: relative;
+  width: 100%;
+}
+
+.keen-slider__slide {
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.slider-prev-button, .slider-next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-prev-button {
+  left: 10px;
+}
+
+.slider-next-button {
+  right: 10px;
+}
+
+.slider-prev-button:hover, .slider-next-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
