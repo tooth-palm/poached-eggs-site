@@ -12,11 +12,6 @@
     <!-- Web Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
-
-    <!-- Web Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Nova+Mono&display=swap" rel="stylesheet">
 
     <!-- keen-slider -->
@@ -34,27 +29,48 @@
                     spacing: 10,
                     origin: 'center',
                 },
+                slideChanged(s) {
+                    const colorIdx = s.track.details.rel
+                    changeMainColor(colorIdx)
+                },
             });
 
             document.querySelector(".slider-prev-button").addEventListener("click", () => {
                 slider.prev();
+                colorIdx = slider.track.absToRel(slider.track.details.rel - 1)
+                changeMainColor(colorIdx);
             });
 
             document.querySelector(".slider-next-button").addEventListener("click", () => {
                 slider.next();
+                colorIdx = slider.track.absToRel(slider.track.details.rel + 1)
+                changeMainColor(colorIdx);
             });
+
+            const changeMainColor = (colorIdx) => {
+                if (colorIdx === 0) {
+                    document.documentElement.style.setProperty('--main-color', '#EFB000');
+                } else if (colorIdx === 1) {
+                    document.documentElement.style.setProperty('--main-color', '#3675C2');
+                } else if (colorIdx === 2) {
+                    document.documentElement.style.setProperty('--main-color', '#DB5095');
+                }
+            }
         });
 
         const selectYellow = () => {
             slider.moveToIdx(0)
+            document.documentElement.style.setProperty('--main-color', '#EFB000');
         }
 
         const selectBlue = () => {
             slider.moveToIdx(1)
+            document.documentElement.style.setProperty('--main-color', '#3675C2');
         }
 
         const selectPink = () => {
             slider.moveToIdx(2)
+            document.documentElement.style.setProperty('--main-color', '#DB5095');
         }
     </script>
 </head>
@@ -132,21 +148,21 @@
                     <button role="button" class="color-option" onclick="selectYellow()">
                         <div class="label-container">
                             <div>Yolk Yellow</div>
-                            <div class="color-circle" style="--color: #EFB000;"></div>
+                            <div class="color-circle" style="--button-color: #EFB000;"></div>
                         </div>
                         <img src="images/yellow_frame.png" alt="Yolk Yellow" width="201" height="140">
                     </button>
                     <button role="button" class="color-option" onclick="selectBlue()">
                         <div class="label-container">
                             <div>Rusty Blue</div>
-                            <div class="color-circle" style="--color: rgb(54, 117, 194);"></div>
+                            <div class="color-circle" style="--button-color: #3675C2;"></div>
                         </div>
                         <img src="images/blue_frame.png" alt="Rusty Blue" width="201" height="140">
                     </button>
                     <button role="button" class="color-option" onclick="selectPink()">
                         <div class="label-container">
                             <div>Pale Pink</div>
-                            <div class="color-circle" style="--color: rgb(219, 80, 149);"></div>
+                            <div class="color-circle" style="--button-color: #DB5095;"></div>
                         </div>
                         <img src="images/pink_frame.png" alt="Pale Pink" width="201" height="140">
                     </button>
@@ -167,7 +183,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2025 poached-eggs by omuken</p>
+        <p>poached-eggs by omuken</p>
     </footer>
 </body>
 
