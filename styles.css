@@ -41,7 +41,6 @@ body {
     gap: 2rem;
 
     a {
-      /* text-decoration: none; */
       color: #fff;
     }
     
@@ -184,50 +183,75 @@ body {
 .product-overview {
   margin-bottom: 2rem;
   padding: 1rem 0;
-}
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);  
-  grid-template-rows: repeat(4, 1fr);     
-  gap: 10px;      
-  height: 736px;                     
-}
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    grid-template-rows: repeat(3, 1fr);     
+    gap: 10px;      
+    height: 736px;                     
+  }
 
-.item1 {
-  grid-column: span 2;  /* 3列分を占める */
-  grid-row: span 2;     /* 2行分を占める */
-  background-color: #aaa;
-}
+  .tile-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 
-.item2 {
-  grid-column: span 3;  /* 4列分を占める */
-  grid-row: span 1;     /* 1行分を占める */
-  background-color: #aaa;
-}
+  .item {
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+  
+  .item1 {
+    grid-column: span 2; 
+    grid-row: span 2;  
+  }
+  
+  .item2 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .item3 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .item4 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .item5 {
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: #fff;
+    border: 8px solid #EFB000;
+    align-content: center;
+    text-align: center;
 
-.item3 {
-  grid-column: span 1;
-  grid-row: span 1;
-  background-color: #aaa;
-}
+    .feature-label {
+      font-size: 0.8rem;
+      display: inline-block;
+      padding: 0 1rem;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8rem;
+      background: #e0e0e0;
+      box-shadow: inset 2px 2px 6px #bebebe,
+                  inset -4px -4px 6px #ffffff;
+    }
 
-.item4 {
-  grid-column: span 1;
-  grid-row: span 1;
-  background-color: #aaa;
-}
+    .title {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
 
-.item5 {
-  grid-column: span 1;
-  grid-row: span 1;
-  background-color: #aaa;
-}
-
-.item6 {
-  grid-column: span 2;
-  grid-row: span 1;
-  background-color: #aaa;
+    .pricing strong {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .carousel {
