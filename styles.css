@@ -10,8 +10,8 @@ body {
   min-height: 100vh;
 }
 
-.kosugi-maru-regular {
-  font-family: "Kosugi Maru", serif;
+.font-provider {
+  font-family: "Nova Mono", "Kosugi Maru", serif;
   font-weight: 400;
   font-style: normal;
 }
