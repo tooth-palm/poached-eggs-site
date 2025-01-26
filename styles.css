@@ -331,7 +331,8 @@ body {
   }
 
   .carousel {
-    width: 400px;
+    width: calc(100vw - 2rem);
+    margin: 0;
   }
 
   .keen-slider__slide {
