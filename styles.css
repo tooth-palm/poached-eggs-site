@@ -77,7 +77,6 @@ body {
 .hero-image {
   width: 100%;
   height: auto;
-  padding: 2rem 2rem 0;
 }
 
 .catchcopy {
@@ -92,17 +91,24 @@ body {
   }
 }
 
+.product-article-wrap {
+  background-color: #fff; 
+  border-radius: 2rem; 
+  padding: 0 2rem;
+}
+
 .product-article {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background-color: #fff;
-  border: 3px solid #ddd;
-  border-radius: 1rem;
-  border-style: dashed;
+  padding: 4rem;
+  border-bottom: 3px solid #ddd;
+  border-bottom-style: dashed;
 
   h2 {
     font-size: 2rem;
   }
+}
+
+.product-article:last-child {
+  border-bottom: none;
 }
 
 .site-footer {
@@ -111,18 +117,6 @@ body {
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-}
-
-@media (max-width: 768px) {
-  .site-header {
-    margin: 1rem;
-  }
-
-  .product-article {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
 .color-picker {
@@ -274,7 +268,7 @@ body {
 }
 
 .keen-slider__slide {
-  height: 320px;
+  height: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
