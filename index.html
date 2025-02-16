@@ -21,6 +21,17 @@
         let slider
 
         document.addEventListener("DOMContentLoaded", () => {
+            // Hamburger menu functionality
+            const hamburger = document.querySelector('.hamburger-menu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+            });
+
+            // Keen Slider initialization
             slider = new KeenSlider(".keen-slider", {
                 loop: true,
                 centered: true,
@@ -77,6 +88,11 @@
 
 <body class="font-provider">
     <header class="site-header">
+        <button class="hamburger-menu" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="spacer"></div>
         <div class="logo-container">
             <img src="images/omuken_logo.png" alt="omuken" width="188" height="32" />
@@ -86,6 +102,12 @@
             <a href="#">購入</a>
         </nav>
     </header>
+    <div class="mobile-menu">
+        <nav>
+            <a href="#">ユーザーガイド</a>
+            <a href="#">購入</a>
+        </nav>
+    </div>
     <main class="content-area-frame">
         <div class="carousel">
             <div class="keen-slider">
