@@ -487,6 +487,25 @@ body.no-scroll {
   padding: 1rem;
   border-radius: 1rem;
   border: 1px solid #eee;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.keyket-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.keyket-banner:focus {
+  outline: 3px solid var(--main-color);
+  outline-offset: 2px;
+}
+
+.keyket-banner:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .keyket-banner .banner-image-container {
