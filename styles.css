@@ -477,6 +477,99 @@ body.no-scroll {
   background-color: #f2f2f2;
 }
 
+/* Keyket Banner */
+.keyket-banner {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 4rem 4rem;
+  background-color: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #eee;
+}
+
+.keyket-banner .banner-image-container {
+  width: calc(40% - 0.5rem);
+  height: 160px;
+}
+
+.keyket-banner .banner-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.keyket-banner .banner-content {
+  width: calc(60% - 0.5rem);
+  padding: 1rem 0;
+}
+
+.keyket-banner .banner-title {
+  font-size: 1.4rem;
+}
+
+.keyket-banner .banner-date {
+  margin-top: 0.4rem;
+  line-height: 1;
+}
+
+.keyket-banner .banner-label {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.keyket-banner .banner-date strong {
+  font-size: 1.8rem;
+}
+
+.keyket-banner .banner-location {
+  margin-top: 0.4rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .keyket-banner {
+    margin: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .keyket-banner .banner-image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .keyket-banner .banner-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .keyket-banner .banner-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .keyket-banner .banner-date {
+    margin-top: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .keyket-banner .banner-date strong {
+    font-size: 1.6rem;
+  }
+
+  .keyket-banner .banner-location {
+    margin-top: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .keyket-banner .banner-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    display: inline-block;
+  }
+}
+
 .feature-list {
   display: flex;
   flex-wrap: wrap;
@@ -584,6 +677,10 @@ body.no-scroll {
     padding: 1rem 0;
     border-bottom: 3px solid #ddd;
     border-bottom-style: dashed;
+  }
+
+  .product-sales .title{
+    font-size: 2rem;
   }
 
   .product-article-wrap {
