@@ -653,4 +653,24 @@ body.no-scroll {
   .spec-wrap .spec-table td {
     padding: 0.5rem;
   }
+
+  
+  /* モバイルではホバー効果を無効化 */
+  .site-header .nav-links a:hover {
+    color: #fff;
+  }
+
+  .color-option:hover img {
+    transform: none;
+  }
+
+  .color-option:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider-prev-button:hover,
+  .slider-next-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
