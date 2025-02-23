@@ -407,7 +407,7 @@ body.no-scroll {
 }
 
 .keen-slider__slide {
-  height: 480px;
+  height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -657,7 +657,7 @@ body.no-scroll {
   }
 
   .keen-slider__slide {
-    height: 320px;
+    height: 160px;
   }
 
   .content-area-frame {
