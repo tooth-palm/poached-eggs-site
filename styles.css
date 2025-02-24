@@ -850,6 +850,11 @@ body a {
     padding: 4rem 0;
   }
 
+  .product-article h2 {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
   .product-article:last-child {
     border-bottom: 3px solid #ddd;
     border-bottom-style: dashed;
