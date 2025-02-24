@@ -21,6 +21,10 @@ body.no-scroll {
   height: 100vh;
 }
 
+body a {
+  color: #888;
+}
+
 .font-provider {
   font-family: "Nova Mono", "Kosugi Maru", serif;
   font-weight: 400;
