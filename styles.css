@@ -21,6 +21,10 @@ body.no-scroll {
   height: 100vh;
 }
 
+body a {
+  color: #888;
+}
+
 .font-provider {
   font-family: "Nova Mono", "Kosugi Maru", serif;
   font-weight: 400;
@@ -193,7 +197,7 @@ body.no-scroll {
 }
 
 .spec-article {
-  padding: 4rem 2rem;
+  margin: 12rem 0 4rem;
   border-bottom: 3px solid #ddd;
   border-bottom-style: dashed;
 }
@@ -201,11 +205,12 @@ body.no-scroll {
 .spec-article .spec-article-lead {
   align-content: center;
   text-align: center;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: #ccc 3px dashed;
 }
 
 .spec-article h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
@@ -221,6 +226,8 @@ body.no-scroll {
 .spec-article .spec-grid {
   display: flex; 
   flex-direction: column;
+  background-color: #fff;
+  padding: 0 2rem;
 }
 
 .spec-article .article-container {
@@ -234,8 +241,7 @@ body.no-scroll {
 
 .spec-article .article-image {
   width: 100%; 
-  height: 300px; 
-  background-color: #ccc; 
+  /* background-color: #fff;  */
   border-radius: 1rem;
 }
 
@@ -326,9 +332,10 @@ body.no-scroll {
 .product-overview .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   gap: 10px;
-  height: 736px;
+  height: 640px;
+  margin: 0 -80px
 }
 
 .product-overview .tile-image {
@@ -344,27 +351,27 @@ body.no-scroll {
 
 .product-overview .item1 {
   grid-column: span 2;
-  grid-row: span 2;
+  grid-row: span 4;
 }
 
 .product-overview .item2 {
   grid-column: span 1;
-  grid-row: span 1;
+  grid-row: span 2;
 }
 
 .product-overview .item3 {
   grid-column: span 1;
-  grid-row: span 1;
+  grid-row: span 2;
 }
 
 .product-overview .item4 {
   grid-column: span 1;
-  grid-row: span 1;
+  grid-row: span 3;
 }
 
 .product-overview .item5 {
   grid-column: span 2;
-  grid-row: span 1;
+  grid-row: span 3;
 }
 
 .product-sales {
@@ -407,7 +414,7 @@ body.no-scroll {
 }
 
 .keen-slider__slide {
-  height: 320px;
+  height: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -455,6 +462,7 @@ body.no-scroll {
   border: 3px solid #ccc;
   border-radius: 1rem;
   overflow: hidden;
+  font-family: "Kosugi Maru", serif;
 }
 
 .spec-wrap .spec-table {
@@ -477,25 +485,61 @@ body.no-scroll {
   background-color: #f2f2f2;
 }
 
+@media screen and (max-width: 768px) {
+  .spec-wrap {
+    border: none;
+    border-top: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    border-radius: 0;
+    color: #000;
+  }
+
+  .spec-wrap .spec-table tr {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px dashed #ccc;
+    padding: 0.75rem 1rem;
+  }
+  
+  .spec-wrap .spec-table tr:last-child {
+    border-bottom: none;
+  }
+  
+  .spec-wrap .spec-table td {
+    width: 100%;
+    border-right: none;
+    padding: 0;
+  }
+  
+  .spec-wrap .spec-table td:first-child {
+    font-size: 0.9rem;
+    color: #6c6666
+  }
+
+  .spec-wrap .spec-table tr:nth-child(even) {
+    background-color: transparent;
+  }
+}
+
 /* Keyket Banner */
 .keyket-banner {
   display: flex;
   gap: 1rem;
   margin: 1rem 4rem 4rem;
   background-color: white;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   border-radius: 1rem;
   border: 1px solid #eee;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  transition: transform 0.2s ease, box-shadow 0.6s ease;
 }
 
 .keyket-banner:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .keyket-banner:focus {
@@ -657,7 +701,7 @@ body.no-scroll {
   }
 
   .keen-slider__slide {
-    height: 160px;
+    height: 240px;
   }
 
   .content-area-frame {
@@ -675,16 +719,26 @@ body.no-scroll {
   .catchcopy h1 {
     font-size: 1.8rem;
     text-align: center;
+    margin-bottom: 2rem;
   }
 
   .catchcopy p {
     font-size: 0.9rem;
     line-height: 1.4;
+    margin: 1rem 0;
   }
 
   .product-overview .container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .product-overview .item {
+    grid-column: span 2;
+    grid-row: span 1;
   }
 
   .product-overview .item4 {
@@ -740,6 +794,14 @@ body.no-scroll {
 
   .spec-article {
     padding: 4rem 0 1rem;
+    margin-top: 0;
+  }
+
+  .spec-article .spec-article-lead {
+    background-color: #fff;
+    border-bottom: none;
+    margin: 0 -1rem;
+    padding: 2rem 0;
   }
 
   .spec-article .spec-article-lead p,
@@ -765,9 +827,13 @@ body.no-scroll {
     padding: 4rem 0 !important;
   }
 
-  .spec-wrap .spec-table th,
-  .spec-wrap .spec-table td {
-    padding: 0.5rem;
+  .spec-article .spec-grid {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .spec-wrap {
+    margin-bottom: 2rem;
   }
 
   
