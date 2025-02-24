@@ -90,7 +90,12 @@ body a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  height: 100%;
+  padding-bottom: 2rem;
+}
+
+.mobile-menu nav div {
+  margin-top: auto;
 }
 
 .mobile-menu a {
@@ -256,12 +261,12 @@ body a {
   border-bottom: none;
 }
 
-.site-footer {
+.team-introduction {
   background-color: var(--main-color);
   transition: background-color 0.5s ease-in-out;
   color: #fff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .color-picker {
@@ -663,6 +668,33 @@ body a {
   text-align: center;
   padding: 0.5rem 0;
   color: #fff;
+}
+
+.notes {
+  margin-top: 2rem;
+  text-indent: -1.5em;
+  padding-left: 1em;
+}
+
+.notes p {
+  margin: 0.5rem 0;
+}
+
+.team-introduction .member {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.team-introduction .member a {
+  color: #fff;
+}
+
+.team-introduction .member a:hover {
+  color: #444;
 }
 
 @media (max-width: 768px) {
