@@ -7,7 +7,7 @@
     <meta property="og:title" content="poached-eggs | かわいさと実用性を兼ね備えた無線分割キーボード">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://site.omuken.me/poached-eggs">
-    <meta property="og:image" content="https://site.omuken.me/poached-eggs/images/title_pair.webp">
+    <meta property="og:image" content="https://site.omuken.me/poached-eggs/images/thumbnail.webp">
     <meta property="og:description" content="デスクをかわいく彩ってくれるコンパクトな無線分割キーボード。ふとした瞬間に感じられるかわいさとガジェットとしての満足感を両立したコンパクトなフォルムに、こだわりの仕様を詰め込みました。キーケット2025で頒布予定(omuken C-3)">
     <meta name="description" content="デスクをかわいく彩ってくれるコンパクトな無線分割キーボード。ふとした瞬間に感じられるかわいさとガジェットとしての満足感を両立したコンパクトなフォルムに、こだわりの仕様を詰め込みました。キーケット2025で頒布予定(omuken C-3)">
     <title>poached-eggs | かわいさと実用性を兼ね備えた無線分割キーボード</title>
@@ -36,6 +36,9 @@
                 mobileMenu.classList.toggle('active');
                 document.body.classList.toggle('no-scroll');
             });
+
+            // 初期状態で黄色以外の画像を非表示にする
+            document.querySelectorAll('.blue-image, .pink-image').forEach(el => el.classList.add('hidden'));
 
             // Keen Slider initialization
             slider = new KeenSlider(".keen-slider", {
@@ -67,10 +70,16 @@
             const changeMainColor = (colorIdx) => {
                 if (colorIdx === 0) {
                     document.documentElement.style.setProperty('--main-color', '#EFB000');
+                    document.querySelectorAll('.yellow-image').forEach(el => el.classList.remove('hidden'));
+                    document.querySelectorAll('.blue-image, .pink-image').forEach(el => el.classList.add('hidden'));
                 } else if (colorIdx === 1) {
                     document.documentElement.style.setProperty('--main-color', '#3675C2');
+                    document.querySelectorAll('.blue-image').forEach(el => el.classList.remove('hidden'));
+                    document.querySelectorAll('.yellow-image, .pink-image').forEach(el => el.classList.add('hidden'));
                 } else if (colorIdx === 2) {
                     document.documentElement.style.setProperty('--main-color', '#DB5095');
+                    document.querySelectorAll('.pink-image').forEach(el => el.classList.remove('hidden'));
+                    document.querySelectorAll('.yellow-image, .blue-image').forEach(el => el.classList.add('hidden'));
                 }
             }
         });
@@ -78,16 +87,22 @@
         const selectYellow = () => {
             slider.moveToIdx(0)
             document.documentElement.style.setProperty('--main-color', '#EFB000');
+            document.querySelectorAll('.yellow-image').forEach(el => el.classList.remove('hidden'));
+            document.querySelectorAll('.blue-image, .pink-image').forEach(el => el.classList.add('hidden'));
         }
 
         const selectBlue = () => {
             slider.moveToIdx(1)
             document.documentElement.style.setProperty('--main-color', '#3675C2');
+            document.querySelectorAll('.blue-image').forEach(el => el.classList.remove('hidden'));
+            document.querySelectorAll('.yellow-image, .pink-image').forEach(el => el.classList.add('hidden'));
         }
 
         const selectPink = () => {
             slider.moveToIdx(2)
             document.documentElement.style.setProperty('--main-color', '#DB5095');
+            document.querySelectorAll('.pink-image').forEach(el => el.classList.remove('hidden'));
+            document.querySelectorAll('.yellow-image, .blue-image').forEach(el => el.classList.add('hidden'));
         }
     </script>
 </head>
@@ -168,7 +183,7 @@
                     組み立て済み ¥<strong>35,000</strong>(税込)
                 </p>
                 <p class="pricing" style="font-size: 0.8rem;">※キースイッチは別途ご購入ください。</p>
-                <p class="pricing" style="font-size: 0.8rem;">※キーケット限定価格（後日オンラインでも頒布予定）</p>
+                <p class="pricing" style="font-size: 0.8rem;">※キーケット限定価格(後日オンラインでも頒布予定)</p>
             </div>
             <a href="https://keyket.jp/tokyo-2025/" target="_blank" rel="noopener noreferrer" class="keyket-banner" role="link" aria-label="キーケット2025のイベント情報">
                 <div class="banner-image-container">
@@ -182,11 +197,11 @@
                         <span class="banner-label">日時</span><br>
                         2025年
                         <strong>3</strong>月
-                        <strong>22</strong>日（土）10:00-16:00
+                        <strong>22</strong>日（土）<wbr />10:00-16:00
                     </p>
                     <p class="banner-location">
                         <span class="banner-label">場所</span><br>
-                        東京都産業貿易センター
+                        東京都産業貿易センター<wbr />
                         台東館 4階全面
                     </p>
                 </div>
@@ -202,21 +217,21 @@
                                 <div style="color: #EFB000;">Yolk Yellow</div>
                                 <div class="color-circle" style="--button-color: #EFB000;"></div>
                             </div>
-                            <img src="images/yellow_frame.png" alt="Yolk Yellow" width="201" height="140">
+                            <img src="images/frame_yellow.webp" alt="Yolk Yellow" width="500" height="400">
                         </button>
                         <button role="button" class="color-option" onclick="selectBlue()">
                             <div class="label-container">
                                 <div style="color: #3675C2;">Fresh Blue</div>
                                 <div class="color-circle" style="--button-color: #3675C2;"></div>
                             </div>
-                            <img src="images/blue_frame.png" alt="Fresh Blue" width="201" height="140">
+                            <img src="images/frame_blue.webp" alt="Fresh Blue" width="500" height="400">
                         </button>
                         <button role="button" class="color-option" onclick="selectPink()">
                             <div class="label-container">
                                 <div style="color: #DB5095;">Rose Bonbon</div>
                                 <div class="color-circle" style="--button-color: #DB5095;"></div>
                             </div>
-                            <img src="images/pink_frame.png" alt="Rose Bonbon" width="201" height="140">
+                            <img src="images/frame_pink.webp" alt="Rose Bonbon" width="500" height="400">
                         </button>
                     </div>
                 </article>
@@ -226,7 +241,9 @@
                     <p>poached-eggsのユニットは手に馴染むサイズ感で、大きさや重さはいつものスマホとほぼ同じ。</p>
                     <p>ガジェットにありがちな無骨さを排除したおもちゃのような可愛いデザインですが、アルミ製のボトムプレートを採用することにより、決して安っぽさを感じないずっしり感を併せ持っています。</p>
                     <div style="width: 100%; height: auto; margin-top: 1rem; border-radius: 1rem;">
-                        <img src="images/product_article_size.webp" alt="product_size" width=2000 height=2000 style="width: 100%; height: auto;">
+                        <img src="images/product_size_yellow.webp" alt="product_size" width=1000 height=1000 style="width: 100%; height: auto;" class="yellow-image">
+                        <img src="images/product_size_blue.webp" alt="product_size" width=1000 height=1000 style="width: 100%; height: auto;" class="blue-image">
+                        <img src="images/product_size_pink.webp" alt="product_size" width=1000 height=1000 style="width: 100%; height: auto;" class="pink-image">
                     </div>
                 </article>
             </div>
@@ -239,7 +256,9 @@
                 <div class="spec-grid">
                     <div class="article-container">
                         <div class="article-image" style="width: 100%; height: auto;">
-                            <img src="images/article_diagram_yellow.webp" alt="diagram" width=2000 height=2000 style="width: 100%; height: auto;">
+                            <img src="images/article_diagram_yellow.webp" alt="diagram" width=2000 height=2000 style="width: 100%; height: auto;" class="yellow-image">
+                            <img src="images/article_diagram_blue.webp" alt="diagram" width=2000 height=2000 style="width: 100%; height: auto;" class="blue-image">
+                            <img src="images/article_diagram_pink.webp" alt="diagram" width=2000 height=2000 style="width: 100%; height: auto;" class="pink-image">
                         </div>
                         <div>
                             <h3>コンパクトに、個性的に</h3>
@@ -309,7 +328,10 @@
                     </tr>
                     <tr>
                         <td style="font-size: 0.8rem;">サイズ</td>
-                        <td>片側: W142mm × D81mm × H18mm</td>
+                        <td>
+                            片側: W142mm × D81mm × H18mm<br />
+                            収納時: W145mm x D84mm x H48mm
+                        </td>
                     </tr>
                     <tr>
                         <td style="font-size: 0.8rem;">重量</td>

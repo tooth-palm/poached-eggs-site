@@ -490,7 +490,7 @@ body a {
   background-color: #f2f2f2;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .spec-wrap {
     border: none;
     border-top: 3px solid #ccc;
@@ -595,7 +595,7 @@ body a {
   line-height: 1.3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .keyket-banner {
     margin: 1rem;
     flex-direction: column;
@@ -610,6 +610,8 @@ body a {
   .keyket-banner .banner-content {
     width: 100%;
     padding: 0;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .keyket-banner .banner-title {
@@ -697,7 +699,11 @@ body a {
   color: #444;
 }
 
-@media (max-width: 768px) {
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1024px) {
   .hamburger-menu {
     display: block;
   }
