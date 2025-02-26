@@ -214,6 +214,10 @@ body a {
   border-bottom: #ccc 3px dashed;
 }
 
+.spec-article .spec-article-lead span {
+  background: linear-gradient(transparent 70%, color-mix(in srgb, var(--main-color) 70%, transparent) 30%);
+}
+
 .spec-article h2 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
@@ -499,6 +503,10 @@ body a {
     color: #000;
   }
 
+  .spec-table {
+    background-color: white;
+  }
+
   .spec-wrap .spec-table tr {
     display: flex;
     flex-direction: column;
@@ -597,7 +605,7 @@ body a {
 
 @media (max-width: 1024px) {
   .keyket-banner {
-    margin: 1rem;
+    margin: 2rem 1rem;
     flex-direction: column;
     gap: 1.5rem;
   }
@@ -795,8 +803,10 @@ body a {
   }
 
   .product-article-wrap {
-    padding: 0;
-    background-color: transparent;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+    border-radius: 0;
+    background-color: white;
   }
 
   .product-article {
@@ -831,21 +841,21 @@ body a {
   }
 
   .spec-article {
-    padding: 4rem 0 1rem;
+    padding: 0;
     margin-top: 0;
   }
 
   .spec-article .spec-article-lead {
-    background-color: #fff;
     border-bottom: none;
     margin: 0 -1rem;
-    padding: 2rem 0;
+    padding: 6rem 0 2rem;
   }
 
   .spec-article .spec-article-lead p,
   .spec-article .spec-article-lead h2 {
     word-break: keep-all;
     overflow-wrap: break-word;
+    font-size: 1.8rem;
   }
 
   .spec-article .col-wrapper {
@@ -853,7 +863,12 @@ body a {
   }
 
   .product-article {
-    padding: 4rem 0;
+    padding: 2rem 0;
+  }
+
+  .product-article h2 {
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .product-article h2 {
@@ -871,8 +886,10 @@ body a {
   }
 
   .spec-article .spec-grid {
-    background-color: transparent;
-    padding: 0;
+    /* background-color: transparent; */
+    padding: 0 1rem;
+    margin: 0 -1rem;
+    border-top: 3px dashed #ddd;
   }
 
   .spec-wrap {
