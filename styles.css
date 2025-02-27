@@ -16,6 +16,13 @@ body {
   min-height: 100vh;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-synthesis: none;
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 body.no-scroll {
   overflow: hidden;
   height: 100vh;
