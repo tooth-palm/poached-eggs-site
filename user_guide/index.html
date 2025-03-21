@@ -47,9 +47,13 @@
         <article class="product-article">
             <h2>ご使用にあたっての注意</h2>
             <h3>バッテリーについて</h3>
-            <p>ほげほげほげほげほげほげほげほげぇ</p>
-            <h3>キーキャップなどの素材の取り扱いについて</h3>
-            <p>ほげほげほげほげほげほげほげほげぇ</p>
+            <p>湿気の多い場所や水がかかる可能性のある場所では使用しないでください。</p>
+            <p>落下や強い衝撃を与えないようにしてください。故障やバッテリーの損傷につながる可能性があります。</p>
+            <p>バッテリーの寿命は使用頻度によって変化します。</p>
+            <p><a href="https://www.baj.or.jp/battery/safety/safety16.html">https://www.baj.or.jp/battery/safety/safety16.html</a></p>
+            <h3>キーキャップ・ケースなどの素材の取り扱いについて</h3>
+            <p>3Dプリント製を多用しています。製法の都合上、製品ごとのばらつき・傷等が生じる場合があります。</p>
+            <p>特にキーケット販売分はキーキャップの寸法が大きめに出てきてしまっています。予備を多めにつけていますので、動きが渋い場合はつける場所を変えたりして対応お願いします。</p>
         </article>
         <article class="product-article">
             <h2>デフォルトキーマップについて</h2>
@@ -93,6 +97,10 @@
                 <li>
                     Unlockは後述するZMKStudioに接続するためのキーになります。
                 </li>
+                <li>
+                    'BT1'~'BT5'まで5このデバイスを覚えておけます。
+                    接続をリセットしたい時は、対象の'BTx'を押しながら、'BT Reset'を押してください。
+                </li>
             </ul>
             <img src="images/layer3.png" alt="default layer" width=2000 height=838>
         </article>
@@ -107,13 +115,40 @@
                 もしGitHubの操作に抵抗がない場合は、GitHubActionsを使った.keymapファイルからのビルドも選択肢になります。
             </p>
             <h3>ZMKStudioを使う場合</h3>
+            <p>
+                ZMKStudioを使う場合は、以下の手順で書き換えを行なってください。詳しくは<a href="https://zmk.dev/docs/features/studio">公式ドキュメント</a>を参照してください。
+            </p>
+            <ol style="margin-left: 2rem;">
+                <li>
+                    poached-eggsの左側をPCに接続します。（ダウンロード版の場合は、Bluetoothで接続できるようです。）
+                </li>
+                <li>
+                    <a href="https://zmk.studio/">https://zmk.studio/</a> にアクセスします。(もしくは、<a href="https://zmk.studio/download">こちら</a>からアプリをインストールしてください。)
+                </li>
+                <li>
+                    レイヤー3の'Studio Unlock'を押します。
+                </li>
+                <li>
+                    接続方法を選択します。
+                    <img src="images/zmk_studio_connect.png" alt="zmk studio connect" width=612 height=342>
+                </li>
+                <li>
+                    接続したデバイスを選択します。
+                    <img src="images/zmk_studio_select.png" alt="zmk studio select" width=612 height=342>
+                </li>
+                <li>
+                    キーマップを変更して保存します。
+                    <img src="images/zmk_studio_change.png" alt="zmk studio change" width=612 height=342>
+                </li>
+                
+            </ol>
             <h3>.keymapファイルからカスタマイズする場合</h3>
             <p>
                 以下のステップでカスタマイズした.keymapファイルでPoachedEggsのキーマップを書き換えることができます。
             </p>
             <ol style="margin-left: 2rem;">
                 <li>
-                    ご自身のアカウントでGitHubにログインし。PoachedEggsのconfigリポジトリをフォークします。
+                    ご自身のアカウントでGitHubにログインし。<a href="https://github.com/omwegg/poached-egg-shield-module">PoachedEggsのconfigリポジトリ</a>をフォークします。
                 </li>
                 <li>
                     .keymapファイルを自分の好みに編集してください。(/config/boards/shields/poached_eggs/poached_eggs.keymap)
@@ -181,10 +216,7 @@
             <ul style="margin-left: 2rem;">
                 <li>
                     このユーザーガイドでは解決しない問題が発生したときや、
-                    キーボードに関するご質問がある場合は、support@omuken.meにメールでお問い合わせください。
-                </li>
-                <li>
-                    キーボードの修理を希望する場合にも同様にsupport@omuken.meにメールをお願いします。
+                    キーボードに関するご質問がある場合は、support@omuken.meにメール又はXのDMでお問い合わせください。
                 </li>
                 <li>
                     本当はDiscordサーバーを用意したかったのですがまだ準備中です、すみません！
