@@ -18,11 +18,6 @@
 
 <body class="font-provider">
     <header class="site-header">
-        <button class="hamburger-menu" aria-label="メニュー">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
         <div class="spacer"></div>
         <div class="logo-container">
             <img src="images/omuken_logo.png" alt="omuken" width="188" height="32" />
@@ -31,20 +26,8 @@
             <a href="/poached-eggs/">紹介ページに戻る</a>
         </nav>
     </header>
-    <div class="mobile-menu">
-        <nav>
-            <a href="/poached-eggs/">紹介ページに戻る</a>
-            <div class="team-introduction">
-                <img src="images/omuken_logo.png" alt="omuken" width="188" height="32" />
-                <div class="member">
-                    <a href="https://x.com/omwegg" target="_blank" rel="noopener noreferrer">@omwegg</a>
-                    <a href="https://x.com/hogebread" target="_blank" rel="noopener noreferrer">@hogebread</a>
-                </div>
-            </div>
-        </nav>
-    </div>
     <main class="content-area-frame">
-        <article class="product-article">
+        <article class="product-article" style="padding-top: 0;">
             <h2>ご使用にあたっての注意</h2>
             <h3>バッテリーについて</h3>
             <p>湿気の多い場所や水がかかる可能性のある場所では使用しないでください。</p>
@@ -57,7 +40,7 @@
         </article>
         <article class="product-article">
             <h2>デフォルトキーマップについて</h2>
-            <p>PoachedEggsではデフォルトで以下のようなキーマップを設定しています。</p>
+            <p>poached-eggsではデフォルトで以下のようなキーマップを設定しています。</p>
             <h3>デフォルトレイヤー</h3>
             <ul style="margin-left: 2rem;">
                 <li>
@@ -78,7 +61,7 @@
             <ul style="margin-left: 2rem;">
                 <li>
                     数字や記号などを設置しています。
-                    PoachedEggsはキーが縦に4行しかないため、数字を入力するためにはレイヤーを移動する必要があります。
+                    poached-eggsはキーが縦に4行しかないため、数字を入力するためにはレイヤーを移動する必要があります。
                 </li>
             </ul>
             <img src="images/layer1.png" alt="default layer" width=2000 height=838>
@@ -98,7 +81,7 @@
                     Unlockは後述するZMKStudioに接続するためのキーになります。
                 </li>
                 <li>
-                    'BT1'~'BT5'まで5このデバイスを覚えておけます。
+                    'BT1'〜'BT5'まで5個のデバイスを覚えておけます。
                     接続をリセットしたい時は、対象の'BTx'をアクティブにした状態で'BT Reset'を押してください。
                 </li>
             </ul>
@@ -107,7 +90,7 @@
         <article class="product-article">
             <h2>キーマップの変更</h2>
             <p>
-                PoachedEggsのキーマップは2通りの方法で変更することができます。
+                poached-eggsのキーマップは2通りの方法で変更することができます。
                 ZMKStudioを使えば画面上で簡単にキーマップを変更することができます。
             </p>
             <p>
@@ -144,11 +127,11 @@
             </ol>
             <h3>.keymapファイルからカスタマイズする場合</h3>
             <p>
-                以下のステップでカスタマイズした.keymapファイルでPoachedEggsのキーマップを書き換えることができます。
+                以下のステップでカスタマイズした.keymapファイルでpoached-eggsのキーマップを書き換えることができます。
             </p>
             <ol style="margin-left: 2rem;">
                 <li>
-                    ご自身のアカウントでGitHubにログインし。<a href="https://github.com/omwegg/poached-egg-shield-module">PoachedEggsのconfigリポジトリ</a>をフォークします。
+                    ご自身のアカウントでGitHubにログインし。<a href="https://github.com/omwegg/poached-egg-shield-module">poached-eggsのconfigリポジトリ</a>をフォークします。
                 </li>
                 <li>
                     .keymapファイルを自分の好みに編集してください。(/config/boards/shields/poached_eggs/poached_eggs.keymap)
