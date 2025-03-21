@@ -126,11 +126,43 @@
                     <img src="images/build_result.png" alt="actions" width=1470 height=294>
                     <img src="images/build_firmware.png" alt="firemware" width=1470 height=738>
                 </li>
+                <li>
+                    ビルド結果をダウンロードしたら、poached-eggsに書き込みを行います。
+                    まずは左手側デバイスからpoached-eggsを接続しましょう。USB-TypeCケーブルでPCに接続してください。
+                    （USBハブなどを使って間接的にPCに接続すると認識されない場合があります。）
+                </li>
+                <li>
+                    接続したらリセットスイッチを2回押してください。以下の画像で赤丸で囲った部分にスイッチがあります。
+                    定規などの細長いもので2回押します。
+                    <img src="images/reset_button.png" alt="default layer" width=2000 height=800>
+                </li>
+                <li>
+                    poached-eggsが接続されると、XIAO-SENSEというドライブが認識されます。
+                    ダウンロードしたファイルのうちpoached_eggs_left-seeeduino_xiao_ble-zmk.uf2
+                    という名前のファイルをドライブにコピーしてください。
+                    書き込む際にエラーが表示されることがありますが、たいていの場合は問題なく書き込みが完了しています。
+                    詳しくは<a href="https://zmk.dev/docs/troubleshooting/flashing-issues">こちら</a>。
+                    <img src="images/build_write.png" alt="default layer" width=999 height=487>
+                </li>
+                <li>
+                    同様にして右手側デバイスにpoached_eggs_right-seeeduino_xiao_ble-zmk.uf2をコピーしてください。
+                </li>
+                <li>
+                    以上でキーマップの変更は完了です！
+                </li>
             </ol>
-            <img src="images/reset_button.png" alt="default layer" width=2000 height=800>
         </article>
         <article class="product-article">
             <h2>フレームの取り替え方</h2>
+            <p>
+                以下の図のように、フレームとアルミプレートを6本のネジで固定しています。
+                6本のネジを全て外すと全体を分解することができます。
+            </p>
+            <p>
+                再度組み立てるときは、ボトムプレートとフレームのネジ穴がうまく合うように全体を重ねて、再度ネジで固定してください。
+                フレームの穴に基盤の端子部分をはめる必要があるため注意してください。
+            </p>
+            <img src="images/diagram.webp" alt="diagram" width=800 height=800>
         </article>
         <article class="product-article">
             <h2>Q&A</h2>
@@ -144,9 +176,6 @@
                 </li>
                 <li>
                     キーボードの修理を希望する場合にも同様にsupport@omuken.meにメールをお願いします。
-                </li>
-                <li>
-                    平日はメールの返信が遅くなる可能性がありますので、あらかじめご了承ください。
                 </li>
                 <li>
                     本当はDiscordサーバーを用意したかったのですがまだ準備中です、すみません！
