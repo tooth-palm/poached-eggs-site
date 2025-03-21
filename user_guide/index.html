@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="omukenの自作キーボードpoached-eggsのユーザーガイド">
+    <title>poached-eggs | かわいさと実用性を兼ね備えた無線分割キーボード</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/user_guide/style.css">
+
+    <!-- Web Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Nova+Mono&family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-provider">
+    <header class="site-header">
+        <button class="hamburger-menu" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="spacer"></div>
+        <div class="logo-container">
+            <img src="images/omuken_logo.png" alt="omuken" width="188" height="32" />
+        </div>
+        <nav class="nav-links">
+            <a href="/poached-eggs/">紹介ページに戻る</a>
+        </nav>
+    </header>
+    <div class="mobile-menu">
+        <nav>
+            <a href="/poached-eggs/">紹介ページに戻る</a>
+            <div class="team-introduction">
+                <img src="images/omuken_logo.png" alt="omuken" width="188" height="32" />
+                <div class="member">
+                    <a href="https://x.com/omwegg" target="_blank" rel="noopener noreferrer">@omwegg</a>
+                    <a href="https://x.com/hogebread" target="_blank" rel="noopener noreferrer">@hogebread</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main class="content-area-frame">
+        <article class="product-article">
+            <h2>ご使用にあたっての注意</h2>
+            <h3>バッテリーについて</h3>
+            <p>ほげほげほげほげほげほげほげほげぇ</p>
+            <h3>キーキャップなどの素材の取り扱いについて</h3>
+            <p>ほげほげほげほげほげほげほげほげぇ</p>
+        </article>
+        <article class="product-article">
+            <h2>デフォルトキーマップについて</h2>
+            <p>PoachedEggsではデフォルトで以下のようなキーマップを設定しています。</p>
+            <h3>デフォルトレイヤー</h3>
+            <ul style="margin-left: 2rem;">
+                <li>
+                    特に何もしていない場合はここに書かれている文字が入力されます。
+                    一般的なQWERTY配列を基本にしています。製作者の好みが大いに反映されているため、
+                    必要であれば後述するZMKStudioを使ってカスタマイズしてください。
+                </li>
+                <li>
+                    ここでMOと書かれているキーを押すことで、押している間はレイヤーを切り替えることができます。
+                </li>
+                <li>
+                    例えばMO(1)と書かれたキーを押している間は、
+                    他のキーを押すとレイヤー1に記されている文字を入力することができます。MO(2), MO(3)も同様です。
+                </li>
+            </ul>
+            <img src="images/default_layer.png" alt="default layer" width=2000 height=838>
+            <h3>レイヤー1</h3>
+            <ul style="margin-left: 2rem;">
+                <li>
+                    数字や記号などを設置しています。
+                    PoachedEggsはキーが縦に4行しかないため、数字を入力するためにはレイヤーを移動する必要があります。
+                </li>
+            </ul>
+            <img src="images/layer1.png" alt="default layer" width=2000 height=838>
+            <h3>レイヤー2</h3>
+            <ul style="margin-left: 2rem;">
+                <li>
+                    ファンクションキーを中心に配置しています。
+                </li>
+            </ul>
+            <img src="images/layer2.png" alt="default layer" width=2000 height=838>
+            <h3>レイヤー3</h3>
+            <ul style="margin-left: 2rem;">
+                <li>
+                    Bluetooth接続に関連するキーが配置されています。
+                </li>
+                <li>
+                    Unlockは後述するZMKStudioに接続するためのキーになります。
+                </li>
+            </ul>
+            <img src="images/layer3.png" alt="default layer" width=2000 height=838>
+        </article>
+        <article class="product-article">
+            <h2>キーマップの変更</h2>
+            <p>
+                PoachedEggsのキーマップは2通りの方法で変更することができます。
+                ZMKStudioを使えば画面上で簡単にキーマップを変更することができます。
+            </p>
+            <p>
+                ただ、ZMKStudioは正式版が公開されて間もないため、まだまだ使いにくい部分も多いです。
+                もしGitHubの操作に抵抗がない場合は、GitHubActionsを使った.keymapファイルからのビルドも選択肢になります。
+            </p>
+            <h3>ZMKStudioを使う場合</h3>
+            <h3>.keymapファイルからカスタマイズする場合</h3>
+            <p>
+                以下のステップでカスタマイズした.keymapファイルでPoachedEggsのキーマップを書き換えることができます。
+            </p>
+            <ol style="margin-left: 2rem;">
+                <li>
+                    ご自身のアカウントでGitHubにログインし。PoachedEggsのconfigリポジトリをフォークします。
+                </li>
+                <li>
+                    .keymapファイルを自分の好みに編集してください。(/config/boards/shields/poached_eggs/poached_eggs.keymap)
+                </li>
+                <li>
+                    リポジトリが更新されると、GitHubActionsを使ったビルドが自動で行われます。
+                </li>
+                <li>
+                    画像のようにActionsから最新のビルドを選択し、firmwareをダウンロードします。
+                    <img src="images/build_result.png" alt="actions" width=1470 height=294>
+                    <img src="images/build_firmware.png" alt="firemware" width=1470 height=738>
+                </li>
+                <li>
+                    ビルド結果をダウンロードしたら、poached-eggsに書き込みを行います。
+                    まずは左手側デバイスからpoached-eggsを接続しましょう。USB-TypeCケーブルでPCに接続してください。
+                    （USBハブなどを使って間接的にPCに接続すると認識されない場合があります。）
+                </li>
+                <li>
+                    接続したらリセットスイッチを2回押してください。以下の画像で赤丸で囲った部分にスイッチがあります。
+                    定規などの細長いもので2回押します。
+                    <img src="images/reset_button.png" alt="default layer" width=2000 height=800>
+                </li>
+                <li>
+                    poached-eggsが接続されると、XIAO-SENSEというドライブが認識されます。
+                    ダウンロードしたファイルのうちpoached_eggs_left-seeeduino_xiao_ble-zmk.uf2
+                    という名前のファイルをドライブにコピーしてください。
+                    書き込む際にエラーが表示されることがありますが、たいていの場合は問題なく書き込みが完了しています。
+                    詳しくは<a href="https://zmk.dev/docs/troubleshooting/flashing-issues">こちら</a>。
+                    <img src="images/build_write.png" alt="default layer" width=999 height=487>
+                </li>
+                <li>
+                    同様にして右手側デバイスにpoached_eggs_right-seeeduino_xiao_ble-zmk.uf2をコピーしてください。
+                </li>
+                <li>
+                    以上でキーマップの変更は完了です！
+                </li>
+            </ol>
+        </article>
+        <article class="product-article">
+            <h2>フレームの取り替え方</h2>
+            <p>
+                以下の図のように、フレームとアルミプレートを6本のネジで固定しています。
+                6本のネジを全て外すと全体を分解することができます。
+            </p>
+            <p>
+                再度組み立てるときは、ボトムプレートとフレームのネジ穴がうまく合うように全体を重ねて、再度ネジで固定してください。
+                フレームの穴に基盤の端子部分をはめる必要があるため注意してください。
+            </p>
+            <img src="images/diagram.webp" alt="diagram" width=800 height=800>
+        </article>
+        <article class="product-article">
+            <h2>Q&A</h2>
+            <h3>充電が開始されません</h3>
+            <ul style="margin-left: 2rem;">
+                <li>
+                    電源がオフの状態では充電されません。電源オンの状態で再度充電をお試しください。
+                </li>
+                <li>
+                    poached-eggsでは充電時にLEDランプが点灯していますが、構造上点灯が見えにくくなっています。
+                </li>
+            </ul>
+        </article>
+        <article class="product-article">
+            <h2>お問い合わせ</h2>
+            <ul style="margin-left: 2rem;">
+                <li>
+                    このユーザーガイドでは解決しない問題が発生したときや、
+                    キーボードに関するご質問がある場合は、support@omuken.meにメールでお問い合わせください。
+                </li>
+                <li>
+                    キーボードの修理を希望する場合にも同様にsupport@omuken.meにメールをお願いします。
+                </li>
+                <li>
+                    本当はDiscordサーバーを用意したかったのですがまだ準備中です、すみません！
+                </li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="team-introduction">
+        <img src="images/omuken_logo.png" alt="omuken" width="188" height="32" />
+        <div class="member">
+            <a href="https://x.com/omwegg" target="_blank" rel="noopener noreferrer">@omwegg</a>
+            <a href="https://x.com/hogebread" target="_blank" rel="noopener noreferrer">@hogebread</a>
+        </div>
+    </footer>
+</body>
+
+</html>
